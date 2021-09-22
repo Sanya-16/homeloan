@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
  
 @Entity
-@Table(name="user_login")
+@Table(name="login")
 public class Login {
 	
 	@Id
@@ -22,6 +22,11 @@ public Login()
 		
 }
  
+@Override
+public String toString() {
+	return "Login [id=" + id + ", username=" + username + ", password=" + password + "]";
+}
+
 public Login(Long id, String username, String password) {
 		
 		this.id = id;
