@@ -1,6 +1,4 @@
 package com.homeloan.homeloan.loginController;
-
-
 import java.util.Objects;
  
 import javax.servlet.http.HttpServletRequest;
