@@ -27,7 +27,11 @@ public class LoginController {
 	@Autowired
     private LoginService userService;
  
-                                   
+	@GetMapping("/")
+	public ModelAndView index() {
+	    return new ModelAndView("Home_page.html");
+	}
+	
     @GetMapping("/login")
            
     public ModelAndView login() {
@@ -35,7 +39,6 @@ public class LoginController {
         mav.addObject("user", new Login());
         return mav;
     }
-    
  
     @PostMapping("/login")
     public String login(@RequestBody Login user ) {
